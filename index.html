@@ -1,182 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shimron Gill - Resume</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 20px 0;
-      background: linear-gradient(135deg, #f4f4f4, #dcdcdc);
-      text-align: left;
-      transition: background 0.3s, color 0.3s;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimron Gill - Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #dcdcdc);
+            text-align: left;
+            transition: background 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 10px;
+        }
 
-    .container {
-      width: 794px;
-      background: white;
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
+        .container {
+            max-width: 794px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
 
-    .center-header {
-      text-align: center;
-    }
+        .header-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
 
-    h1, h2 {
-      color: #333;
-    }
+        .center-header {
+            text-align: center;
+        }
 
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 20px;
-    }
+        h1, h2 {
+            color: #333;
+        }
 
-    .section {
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 8px;
-      background: #f9f9f9;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 40px;
+            max-width: 100%;
+        }
 
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
 
-    .download-btn, .theme-toggle {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
-      border: none;
-    }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .download-btn:hover, .theme-toggle:hover {
-      background: #0056b3;
-    }
+        .download-btn, .theme-toggle {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+        }
 
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007BFF;
-      font-size: 18px;
-    }
+        .download-btn:hover, .theme-toggle:hover {
+            background: #0056b3;
+        }
 
-    .dark-mode {
-      background-color: #222;
-      color: white;
-    }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
 
-    .dark-mode .container {
-      background-color: #333;
-    }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
 
-    .dark-mode h1,
-    .dark-mode h2,
-    .dark-mode p,
-    .dark-mode li,
-    .dark-mode .contact,
-    .dark-mode a {
-      color: white;
-    }
+        .dark-mode .container {
+            background-color: #333;
+        }
 
-    .dark-mode .section {
-      background: #444;
-      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
-    }
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode p,
+        .dark-mode li,
+        .dark-mode .contact,
+        .dark-mode a {
+            color: white;
+        }
 
-    .progress-bar {
-      width: 80%;
-      background-color: #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      margin: 10px 0;
-    }
+        .dark-mode .section {
+            background: #444;
+            box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+        }
 
-    .progress-bar div {
-      height: 20px;
-      background-color: #007BFF;
-      text-align: right;
-      padding-right: 10px;
-      color: white;
-      line-height: 20px;
-    }
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-    }
+        .progress-bar div {
+            height: 20px;
+            background-color: #007BFF;
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            line-height: 20px;
+        }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
 
-    textarea {
-      resize: vertical;
-      height: 100px;
-    }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-    @media (max-width: 768px) {
-      .container {
-        width: 100%;
-        padding: 10px;
-      }
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
 
-    @media print {
-      body {
-        width: 210mm;
-        height: 297mm;
-        margin: 0;
-      }
+            h1 {
+                font-size: 26px;
+            }
 
-      .container {
-        width: 210mm;
-        height: auto;
-        padding: 10mm;
-        box-shadow: none;
-        border-radius: 0;
-      }
+            h2 {
+                font-size: 20px;
+            }
 
-      .download-btn, .theme-toggle, iframe {
-        display: none;
-      }
-    }
-  </style>
+            .download-btn, .theme-toggle {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+            }
+
+            .container {
+                width: 210mm;
+                height: auto;
+                padding: 10mm;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .download-btn, .theme-toggle, iframe {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
-  <div class="container">
+<div class="container">
+    <div class="header-controls">
+        <div></div>
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
     <div class="center-header">
-      <img src="profile.jpg" alt="Shimron Gill" class="profile-pic" />
-      <h1>Shimron Gill</h1>
-      <p class="contact">Email: shimron.gill@icloud.com | Phone: (512) 576-3252 | Location: Austin, TX</p>
-      <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+        <img src="profile.jpg" alt="Shimron Gill" class="profile-pic" />
+        <h1>Shimron Gill</h1>
+        <p class="contact">Email: shimron.gill@icloud.com | Phone: (512) 576-3252 | Location: Austin, TX</p>
+        <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
     </div>
 
     <div class="section">
@@ -273,22 +292,21 @@
         <button type="submit" class="download-btn">Send</button>
       </form>
     </div>
-  </div>
-
-  <script>
+</div>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
-      let sections = document.querySelectorAll(".section");
-      sections.forEach((section, index) => {
-        setTimeout(() => {
-          section.classList.add("visible");
-        }, index * 300);
-      });
+        let sections = document.querySelectorAll(".section");
+        sections.forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add("visible");
+            }, index * 300);
+        });
     });
 
     function toggleTheme() {
-      document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
     }
-  </script>
+</script>
 </body>
 </html>
 
