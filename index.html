@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shimron Gill - Resume</title>
-  
-  <!-- CSS Styling -->
   <style>
-    /* Body Styles */
     body {
         font-family: 'Arial', sans-serif;
         margin: 0;
@@ -22,7 +19,6 @@
         padding: 40px 10px;
     }
 
-    /* Container Styles */
     .container {
         max-width: 794px;
         width: 100%;
@@ -33,14 +29,19 @@
         box-sizing: border-box;
     }
 
-    /* Header Controls */
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .header-controls {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
 
-    /* Header Styles */
     .center-header {
         text-align: center;
     }
@@ -49,7 +50,6 @@
         color: #333;
     }
 
-    /* Profile Picture */
     .profile-pic {
         width: 150px;
         height: 150px;
@@ -59,7 +59,6 @@
         max-width: 100%;
     }
 
-    /* Section Styles */
     .section {
         margin-bottom: 20px;
         padding: 15px;
@@ -76,7 +75,6 @@
         transform: translateY(0);
     }
 
-    /* Buttons */
     .download-btn, .theme-toggle {
         display: inline-block;
         padding: 10px 20px;
@@ -95,7 +93,6 @@
         transform: scale(1.03);
     }
 
-    /* Social Links */
     .social-links a {
         margin: 0 10px;
         text-decoration: none;
@@ -103,7 +100,6 @@
         font-size: 18px;
     }
 
-    /* Dark Mode */
     .dark-mode {
         background-color: #222;
         color: white;
@@ -127,7 +123,6 @@
         box-shadow: 0 2px 5px rgba(255,255,255,0.1);
     }
 
-    /* Progress Bars */
     .progress-bar {
         width: 100%;
         background-color: #ddd;
@@ -145,7 +140,12 @@
         line-height: 20px;
     }
 
-    /* Form Elements */
+    iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+    }
+
     input, textarea {
         width: 97%;
         padding: 10px;
@@ -168,7 +168,6 @@
         min-height: 120px;
     }
 
-    /* Responsive Styles */
     @media (max-width: 768px) {
         .container {
             padding: 15px;
@@ -188,7 +187,6 @@
         }
     }
 
-    /* Print Styles */
     @media print {
         body {
             width: 210mm;
@@ -210,93 +208,176 @@
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <!-- Header & Theme Toggle -->
-    <div class="header-controls">
-      <div></div>
-      <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
-    </div>
-
-    <!-- Profile Section -->
-    <div class="center-header">
-      <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
-      <h1>Shimron Gill</h1>
-      <p class="contact">
-        Email: <a href="mailto:shimron.gill@icloud.com">shimron.gill@icloud.com</a> |
-        Phone: (512) 576-3252 |
-        Location: Round Rock, TX
-      </p>
-      <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
-    </div>
-
-    <!-- About Me Section -->
-    <div class="section">
-      <h2>About Me</h2>
-      <p>Accomplished Systems Engineer skilled in automation, system administration, and IT infrastructure support. Adept at troubleshooting and optimizing server environments and delivering technical excellence in fast-paced environments.</p>
-    </div>
-
-    <!-- Work Experience Section -->
-    <div class="section">
-      <h2>Work Experience</h2>
-      <!-- Add work experience content here (same as your original content) -->
-    </div>
-
-    <!-- Education Section -->
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>Arizona State University</strong> – B.S. Information Technology (25 credit hours), Nov 2020</p>
-      <p><strong>Texas State University</strong> – B.S. Computer Science (9 credit hours), Jul 2022</p>
-    </div>
-
-    <!-- Skills Section -->
-    <div class="section">
-      <h2>Skills</h2>
-      <!-- Add skills and progress bars here (same as your original content) -->
-    </div>
-
-    <!-- Social Links Section -->
-    <div class="section social-links">
-      <h2>Connect With Me</h2>
-      <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
-    </div>
-
-    <!-- Google Map Section -->
-    <div class="section">
-      <h2>My Location</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
-    </div>
-
-    <!-- Contact Form Section -->
-    <div class="section">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xanekdna" method="POST" id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="download-btn">Send</button>
-      </form>
-    </div>
+<div class="container">
+  <div class="header-controls">
+    <div></div>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
   </div>
 
-  <!-- JavaScript for Theme Toggle & Animations -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      let sections = document.querySelectorAll(".section");
-      sections.forEach((section, index) => {
-        setTimeout(() => {
-          section.classList.add("visible");
-        }, index * 300);
-      });
-    });
+  <!-- Profile Section -->
+  <div class="center-header">
+    <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
+    <h1>Shimron Gill</h1>
+    <p class="contact">
+      Email: <a href="mailto:shimron.gill@icloud.com">shimron.gill@icloud.com</a> |
+      Phone: (512) 576-3252 |
+      Location: Round Rock, TX
+    </p>
+    <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+  </div>
 
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+  <!-- About Me Section -->
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Accomplished Systems Engineer skilled in automation, system administration, and IT infrastructure support. Adept at troubleshooting and optimizing server environments and delivering technical excellence in fast-paced environments.</p>
+  </div>
+
+  <!-- Work Experience Section -->
+  <div class="section">
+    <h2>Work Experience</h2>
+    <p><strong>Kforce Inc.</strong><br>
+    <em>Lab Support Engineer, Round Rock, Texas | Jan 2023 – Nov 2024</em></p>
+    <ul>
+      <li>Performed LaaS server hardware assembly, disassembly, and part replacements quickly and accurately.</li>
+      <li>Installed and configured computing infrastructure and deployed new servers, equipment, and software as required.</li>
+      <li>Maintained accurate hardware inventory records.</li>
+    </ul>
+
+    <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br>
+    <em>Systems Administrator, Austin, Texas | Mar 2021 – Aug 2022</em></p>
+    <ul>
+      <li>Represented as a State MDS Automation Coordinator for troubleshooting MDS assessments for nursing facilities.</li>
+      <li>Successfully provided technical application support for Minimum Data Set (MDS) and other HHSC systems.</li>
+      <li>Updated organization's Microsoft Access database and ensured backup plans were maintained.</li>
+    </ul>
+
+    <p><strong>IronOrbit</strong><br>
+    <em>IT Service Desk Analyst, Remote, Texas | Jan 2021 – Feb 2021</em></p>
+    <ul>
+      <li>Efficiently answered inbound phone calls by following procedures and scripts to deliver timely resolutions.</li>
+      <li>Identified clients, collected relevant information concerning issues, and created support tickets.</li>
+      <li>Assisted client requests, delivered basic/advanced technical support, and provided excellent customer service.</li>
+    </ul>
+
+    <p><strong>CyberCoders</strong><br>
+    <em>Desktop & Network Support Coordinator, Alameda, California | Nov 2019 – Apr 2020</em></p>
+    <ul>
+      <li>Successfully responded to and prioritized requests for technical support and assistance.</li>
+      <li>Identified and analyzed support issues to determine causes and provide potential resolutions.</li>
+      <li>Installed, configured, and assisted with antivirus and backup software (Carbonite/Acronis).</li>
+    </ul>
+
+    <p><strong>EmrCpr, Global IT</strong><br>
+    <em>Engineer Lab Administrator, Sunnyvale, California | Oct 2018 – Oct 2019</em></p>
+    <ul>
+      <li>Efficiently configured, troubleshot, stacked, and upgraded code for Ruckus and Brocade routers and switches.</li>
+      <li>Administered, managed, and troubleshot network infrastructure equipment (PDU, Terminal Server, KVM).</li>
+      <li>Installed VMware ESXi vSphere client for Windows and Linux VM deployment.</li>
+    </ul>
+
+    <p><strong>IT Desktop Technician, Fremont, California</strong><br>
+    <em>Jul 2018 – Oct 2018</em></p>
+    <ul>
+      <li>Facilitated disconnect/reconnect for desktop setup, monitors, and docking stations.</li>
+      <li>Coordinated rack and stack servers, routers, and switches and performed cable management.</li>
+      <li>Debugged and installed low-voltage cables, security cameras, and in-ceiling speakers using schematic diagrams.</li>
+    </ul>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section">
+    <h2>Education</h2>
+    <p><strong>Arizona State University</strong> – B.S. Information Technology (25 credit hours), Nov 2020</p>
+    <p><strong>Texas State University</strong> – B.S. Computer Science (9 credit hours), Jul 2022</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="section">
+    <h2>Skills</h2>
+    <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
+    <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+    <p>Windows/Linux Administration</p>
+    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+    <p>Applications (SAS-Viya, SFDC, ServiceNow, PuTTY, VNC, Wireshark, LibreNMS)</p>
+    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+    <p>Virtualization & Cloud (VMware, Azure, AWS)</p>
+    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+    <p>Scripting (Python, PowerShell, Bash, HTML)</p>
+    <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+    <p>Networking and Hardware (Ruckus/Brocade Routers, Switches)</p>
+    <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+  </div>
+
+  <!-- Connect With Me Section -->
+  <div class="section social-links">
+    <h2>Connect With Me</h2>
+    <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
+  </div>
+
+  <!-- My Location Section -->
+  <div class="section">
+    <h2>My Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.870063895292!2d-97.74034978413716!3d30.267153081894274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5d5a5f6f7ef%3A0x2f9b7ef82f957b2!2sRound%20Rock%2C%20TX!5e0!3m2!1sen!2sus!4v1676856070238!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xanekdna" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="download-btn">Send</button>
+    </form>
+  </div>
+</div>
+
+<!-- Animation + Theme Toggle Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let sections = document.querySelectorAll(".section");
+    sections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add("visible");
+      }, index * 300);
+    });
+  });
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
+<!-- Contact Form Submission Handler -->
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert("✅ Thanks for your message! I'll get back to you soon.");
+        form.reset();
+      } else {
+        alert("❌ Oops! Something went wrong. Please try again.");
+      }
+    }).catch(error => {
+      alert("❌ There was an error submitting the form.");
+    });
+  });
+</script>
+
 </body>
 </html>
 
