@@ -1,36 +1,190 @@
-k<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Shimron Gill's professional resume and portfolio, showcasing skills in systems engineering and IT infrastructure.">
+  <meta name="keywords" content="Shimron Gill, resume, systems engineer, IT, portfolio">
+  <meta name="author" content="Shimron Gill">
   <title>Shimron Gill - Resume</title>
   <style>
-/* Styling for the Projects Section */
-<style>
- body {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s, border 0.3s;
+    :root {
+      /* Light Mode Colors */
+      --bg-color: #f8f8f8;
+      --text-color: #000000;
+      --link-color: #0000FF;
+      --section-bg: #F9F9F9;
+      --project-bg: #f2f2f2;
+      --project-highlight-bg: #e8e8e8; /* Darker shade for highlighted project */
     }
 
-    /* Styling for the Projects Section */
+    body.dark-mode {
+      /* Dark Mode Colors */
+      --bg-color: #2c2c2c;
+      --text-color: #f0f0f0;
+      --link-color: #00BFFF;
+      --section-bg: #444444;
+      --project-bg: #414141;
+      --project-highlight-bg: #3a3a3a; /* Darker shade for highlighted project */
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-color), #dcdcdc);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 10px;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background-color: var(--bg-color);
+    }
+
+    .container {
+      max-width: 794px;
+      width: 100%;
+      background: var(--section-bg);
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .header-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .center-header {
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: var(--text-color);
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 40px;
+      max-width: 100%;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: var(--project-bg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .download-btn, .theme-toggle {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--link-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .download-btn:hover, .theme-toggle:hover {
+      background: #0056b3;
+      transform: scale(1.03);
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--link-color);
+      font-size: 18px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .progress-bar div {
+      height: 20px;
+      background-color: var(--link-color);
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      line-height: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    input, textarea {
+      width: 97%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--link-color);
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+      outline: none;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 120px;
+    }
+
+    #form-message {
+      margin-top: 10px;
+    }
+
     #projects {
       margin-top: 40px;
-      border: 1px solid transparent; /* Transparent border */
-      border-radius: 12px; /* Smooth rounded corners */
+      border: 1px solid transparent;
+      border-radius: 12px;
       padding: 20px;
-      background-color: #f9f9f9; /* Slightly lighter background */
-      transition: background-color 0.3s, border 0.3s;
+      background: var(--project-bg);
+      transition: background-color 0.3s;
     }
 
     .project {
       margin-bottom: 20px;
       padding: 10px;
-      background-color: #f2f2f2; /* Slightly lighter project background */
-      border: 1px solid transparent; /* Transparent border */
+      background: var(--project-bg);
+      border: 1px solid transparent;
       border-radius: 8px;
-      transition: background-color 0.3s, border 0.3s;
+      transition: background-color 0.3s;
+    }
+
+    .project-highlight {
+      background: var(--project-highlight-bg); /* Darker background for Automation Script Hub */
     }
 
     .project h3 {
@@ -39,13 +193,27 @@ k<!DOCTYPE html>
       font-weight: bold;
     }
 
+    .collapsible-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+
     .toggle-button {
       font-size: 1.2em;
       background-color: transparent;
       border: none;
       cursor: pointer;
       font-weight: bold;
-      color: #0000FF;
+      color: var(--link-color);
       margin-right: 10px;
     }
 
@@ -60,7 +228,7 @@ k<!DOCTYPE html>
 
     .project a {
       text-decoration: none;
-      color: #0000FF;
+      color: var(--link-color);
       font-weight: bold;
     }
 
@@ -68,330 +236,131 @@ k<!DOCTYPE html>
       text-decoration: underline;
     }
 
-    .collapsible-header {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.2em;
-    }
-
-    .collapsible-header span {
-      margin-left: 5px;
-      font-weight: bold;
-    }
-
-    .clear {
-      clear: both;
-    }
-
     .toggle-wrapper {
       display: flex;
       align-items: center;
     }
-    
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #f4f4f4, #dcdcdc);
-        text-align: left;
-        transition: background 0.3s, color 0.3s;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        min-height: 100vh;
-        padding: 40px 10px;
-    }
-
-    .container {
-        max-width: 794px;
-        width: 100%;
-        background: white;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .center-header {
-        text-align: center;
-    }
-
-    h1, h2 {
-        color: #333;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-top: 40px;
-        max-width: 100%;
-    }
-
-    .section {
-        margin-bottom: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        background: #f9f9f9;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .download-btn, .theme-toggle {
-        display: inline-block;
-        padding: 10px 20px;
-        background: #007BFF;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 10px;
-        cursor: pointer;
-        border: none;
-        transition: background 0.3s, transform 0.2s;
-    }
-
-    .download-btn:hover, .theme-toggle:hover {
-        background: #0056b3;
-        transform: scale(1.03);
-    }
-
-    .social-links a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #007BFF;
-        font-size: 18px;
-    }
-
-    .dark-mode {
-        background-color: #222;
-        color: white;
-    }
-
-    .dark-mode .container {
-        background-color: #333;
-    }
-
-    .dark-mode h1,
-    .dark-mode h2,
-    .dark-mode p,
-    .dark-mode li,
-    .dark-mode .contact,
-    .dark-mode a {
-        color: white;
-    }
-
-    .dark-mode .section {
-        background: #444;
-        box-shadow: 0 2px 5px rgba(255,255,255,0.1);
-    }
-
-    .progress-bar {
-        width: 100%;
-        background-color: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-        margin: 10px 0;
-    }
-
-    .progress-bar div {
-        height: 20px;
-        background-color: #007BFF;
-        text-align: right;
-        padding-right: 10px;
-        color: white;
-        line-height: 20px;
-    }
-
-    iframe {
-        width: 100%;
-        height: 300px;
-        border: 0;
-    }
-
-    input, textarea {
-        width: 97%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        font-family: inherit;
-        transition: border-color 0.3s, box-shadow 0.3s;
-    }
-
-    input:focus, textarea:focus {
-        border-color: #007BFF;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-        outline: none;
-    }
-
-    textarea {
-        resize: none;
-        min-height: 120px;
-    }
 
     @media (max-width: 768px) {
-        .container {
-            padding: 15px;
-        }
-
-        h1 {
-            font-size: 26px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        .download-btn, .theme-toggle {
-            font-size: 14px;
-            padding: 8px 16px;
-        }
+      .container {
+        padding: 15px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      .download-btn, .theme-toggle {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
     }
 
     @media print {
-        body {
-            width: 210mm;
-            height: 297mm;
-            margin: 0;
-        }
-
-        .container {
-            width: 210mm;
-            height: auto;
-            padding: 10mm;
-            box-shadow: none;
-            border-radius: 0;
-        }
-
-        .download-btn, .theme-toggle, iframe {
-            display: none;
-        }
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+      }
+      .container {
+        width: 210mm;
+        height: auto;
+        padding: 10mm;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .download-btn, .theme-toggle, iframe {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <div class="header-controls">
-    <div></div>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
-  </div>
+  <div class="container">
+    <div class="header-controls">
+      <div></div>
+      <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
 
-  <!-- Profile Section -->
-  <div class="center-header">
-    <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
-    <h1>Shimron Gill</h1>
-    <p class="contact">
-      Email: <a href="mailto:shimron.gill@icloud.com">shimron.gill@icloud.com</a> |
-      Phone: (512) 576-3252 |
-      Location: Round Rock, TX
-    </p>
-    <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
-  </div>
+    <!-- Profile Section -->
+    <div class="center-header">
+      <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
+      <h1>Shimron Gill</h1>
+      <p class="contact">
+        Email: <a href="mailto:shimron.gill@icloud.com">shimron.gill@icloud.com</a> |
+        Phone: (512) 576-3252 |
+        Location: Round Rock, TX
+      </p>
+      <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+    </div>
 
-  <!-- About Me Section -->
-  <div class="section">
-    <h2>About Me</h2>
-    <p>Accomplished Systems Engineer skilled in automation, system administration, and IT infrastructure support. Adept at troubleshooting and optimizing server environments and delivering technical excellence in fast-paced environments.</p>
-  </div>
+    <!-- About Me Section -->
+    <div class="section">
+      <h2>About Me</h2>
+      <p>Accomplished Systems Engineer skilled in automation, system administration, and IT infrastructure support. Adept at troubleshooting and optimizing server environments and delivering technical excellence in fast-paced environments.</p>
+    </div>
 
-  <!-- Work Experience Section -->
-  <div class="section">
-    <h2>Work Experience</h2>
-    <p><strong>Kforce Inc.</strong><br>
-    <em>Lab Support Engineer, Round Rock, Texas | Jan 2023 – Nov 2024</em></p>
-    <ul>
-      <li>Performed LaaS server hardware assembly, disassembly, and part replacements quickly and accurately.</li>
-      <li>Installed and configured computing infrastructure and deployed new servers, equipment, and software as required.</li>
-      <li>Maintained accurate hardware inventory records.</li>
-    </ul>
+    <!-- Work Experience Section -->
+    <div class="section">
+      <h2>Work Experience</h2>
+      <p><strong>Kforce Inc.</strong><br>
+      <em>Lab Support Engineer, Round Rock, Texas | Jan 2023 – Nov 2024</em></p>
+      <ul>
+        <li>Performed LaaS server hardware assembly, disassembly, and part replacements quickly and accurately.</li>
+        <li>Installed and configured computing infrastructure and deployed new servers, equipment, and software as required.</li>
+        <li>Maintained accurate hardware inventory records.</li>
+      </ul>
+      <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br>
+      <em>Systems Administrator, Austin, Texas | Mar 2021 – Aug 2022</em></p>
+      <ul>
+        <li>Represented as a State MDS Automation Coordinator for troubleshooting MDS assessments for nursing facilities.</li>
+        <li>Successfully provided technical application support for Minimum Data Set (MDS) and other HHSC systems.</li>
+        <li>Updated organization's Microsoft Access database and ensured backup plans were maintained.</li>
+      </ul>
+      <p><strong>IronOrbit</strong><br>
+      <em>IT Service Desk Analyst, Remote, Texas | Jan 2021 – Feb 2021</em></p>
+      <ul>
+        <li>Efficiently answered inbound phone calls by following procedures and scripts to deliver timely resolutions.</li>
+        <li>Identified clients, collected relevant information concerning issues, and created support tickets.</li>
+        <li>Assisted client requests, delivered basic/advanced technical support, and provided excellent customer service.</li>
+      </ul>
+      <p><strong>CyberCoders</strong><br>
+      <em>Desktop & Network Support Coordinator, Alameda, California | Nov 2019 – Apr 2020</em></p>
+      <ul>
+        <li>Successfully responded to and prioritized requests for technical support and assistance.</li>
+        <li>Identified and analyzed support issues to determine causes and provide potential resolutions.</li>
+        <li>Installed, configured, and assisted with antivirus and backup software (Carbonite/Acronis).</li>
+      </ul>
+      <p><strong>EmrCpr, Global IT</strong><br>
+      <em>Engineer Lab Administrator, Sunnyvale, California | Oct 2018 – Oct 2019</em></p>
+      <ul>
+        <li>Efficiently configured, troubleshot, stacked, and upgraded code for Ruckus and Brocade routers and switches.</li>
+        <li>Administered, managed, and troubleshot network infrastructure equipment (PDU, Terminal Server, KVM).</li>
+        <li>Installed VMware ESXi vSphere client for Windows and Linux VM deployment.</li>
+      </ul>
+      <p><strong>IT Desktop Technician, Fremont, California</strong><br>
+      <em>Jul 2018 – Oct 2018</em></p>
+      <ul>
+        <li>Facilitated disconnect/reconnect for desktop setup, monitors, and docking stations.</li>
+        <li>Coordinated rack and stack servers, routers, and switches and performed cable management.</li>
+        <li>Debugged and installed low-voltage cables, security cameras, and in-ceiling speakers using schematic diagrams.</li>
+      </ul>
+    </div>
 
-    <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br>
-    <em>Systems Administrator, Austin, Texas | Mar 2021 – Aug 2022</em></p>
-    <ul>
-      <li>Represented as a State MDS Automation Coordinator for troubleshooting MDS assessments for nursing facilities.</li>
-      <li>Successfully provided technical application support for Minimum Data Set (MDS) and other HHSC systems.</li>
-      <li>Updated organization's Microsoft Access database and ensured backup plans were maintained.</li>
-    </ul>
-
-    <p><strong>IronOrbit</strong><br>
-    <em>IT Service Desk Analyst, Remote, Texas | Jan 2021 – Feb 2021</em></p>
-    <ul>
-      <li>Efficiently answered inbound phone calls by following procedures and scripts to deliver timely resolutions.</li>
-      <li>Identified clients, collected relevant information concerning issues, and created support tickets.</li>
-      <li>Assisted client requests, delivered basic/advanced technical support, and provided excellent customer service.</li>
-    </ul>
-
-    <p><strong>CyberCoders</strong><br>
-    <em>Desktop & Network Support Coordinator, Alameda, California | Nov 2019 – Apr 2020</em></p>
-    <ul>
-      <li>Successfully responded to and prioritized requests for technical support and assistance.</li>
-      <li>Identified and analyzed support issues to determine causes and provide potential resolutions.</li>
-      <li>Installed, configured, and assisted with antivirus and backup software (Carbonite/Acronis).</li>
-    </ul>
-
-    <p><strong>EmrCpr, Global IT</strong><br>
-    <em>Engineer Lab Administrator, Sunnyvale, California | Oct 2018 – Oct 2019</em></p>
-    <ul>
-      <li>Efficiently configured, troubleshot, stacked, and upgraded code for Ruckus and Brocade routers and switches.</li>
-      <li>Administered, managed, and troubleshot network infrastructure equipment (PDU, Terminal Server, KVM).</li>
-      <li>Installed VMware ESXi vSphere client for Windows and Linux VM deployment.</li>
-    </ul>
-
-    <p><strong>IT Desktop Technician, Fremont, California</strong><br>
-    <em>Jul 2018 – Oct 2018</em></p>
-    <ul>
-      <li>Facilitated disconnect/reconnect for desktop setup, monitors, and docking stations.</li>
-      <li>Coordinated rack and stack servers, routers, and switches and performed cable management.</li>
-      <li>Debugged and installed low-voltage cables, security cameras, and in-ceiling speakers using schematic diagrams.</li>
-    </ul>
-  </div>
-
- <div class="container">
-    <!-- Collapsible Projects Section -->
-   <div class="section" id="projects">
-      <div class="collapsible-header" onclick="toggleProjects()">
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+      <button class="collapsible-header" aria-expanded="true" aria-controls="projects-list" onclick="toggleProjects()">
         <span class="toggle-wrapper">
-          <button class="toggle-button" id="projects-toggle">-</button>
+          <span class="toggle-button" id="projects-toggle">-</span>
           <span>Projects</span>
         </span>
-      </div>
-
+      </button>
       <div id="projects-list" style="display: block;">
-        <!-- Example Project -->
-        <div class="project">
-          <div class="collapsible-header" onclick="toggleProjectDetails(this)">
+        <div class="project project-highlight">
+          <button class="collapsible-header" aria-expanded="true" aria-controls="project-1-details" onclick="toggleProjectDetails(this)">
             <span class="toggle-wrapper">
-              <button class="toggle-button">-</button>
+              <span class="toggle-button">-</span>
               <span>Automation Script Hub</span>
             </span>
-          </div>
-          <div class="project-details" style="display: block;">
+          </button>
+          <div class="project-details" id="project-1-details" style="display: block;">
             <ul>
               <li><strong>Key Features:</strong> Modular script design, CLI menus, logging, error handling</li>
               <li><strong>Use Cases:</strong> Auto patch servers, restart stuck services, clean up temp/log files</li>
@@ -401,140 +370,139 @@ k<!DOCTYPE html>
             <a href="https://github.com/sgill3077/automation-script-hub" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
           </div>
         </div>
-
-        <!-- Add More Projects Here -->
-        <!-- You can add additional project sections like the above, following the same structure -->
-
       </div>
-      <div class="clear"></div>
     </div>
 
+    <!-- Education Section -->
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Arizona State University</strong> – B.S. Information Technology (25 credit hours), Nov 2020</p>
+      <p><strong>Texas State University</strong> – B.S. Computer Science (9 credit hours), Jul 2022</p>
+    </div>
 
+    <!-- Skills Section -->
+    <div class="section">
+      <h2>Skills</h2>
+      <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
+      <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+      <p>Windows/Linux Administration</p>
+      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+      <p>Applications (SAS-Viya, SFDC, ServiceNow, PuTTY, VNC, Wireshark, LibreNMS)</p>
+      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+      <p>Virtualization & Cloud (VMware, Azure, AWS)</p>
+      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+      <p>Scripting (Python, PowerShell, Bash, HTML)</p>
+      <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+      <p>Networking and Hardware (Ruckus/Brocade Routers, Switches)</p>
+      <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+    </div>
 
-  <!-- Education Section -->
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>Arizona State University</strong> – B.S. Information Technology (25 credit hours), Nov 2020</p>
-    <p><strong>Texas State University</strong> – B.S. Computer Science (9 credit hours), Jul 2022</p>
-  </div>
+    <!-- Connect With Me Section -->
+    <div class="section social-links">
+      <h2>Connect With Me</h2>
+      <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/sgill3077/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
+    </div>
 
-  <!-- Skills Section -->
-  <div class="section">
-    <h2>Skills</h2>
-    <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
-    <div class="progress-bar"><div style="width: 70%;">70%</div></div>
-    <p>Windows/Linux Administration</p>
-    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-    <p>Applications (SAS-Viya, SFDC, ServiceNow, PuTTY, VNC, Wireshark, LibreNMS)</p>
-    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-    <p>Virtualization & Cloud (VMware, Azure, AWS)</p>
-    <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-    <p>Scripting (Python, PowerShell, Bash, HTML)</p>
-    <div class="progress-bar"><div style="width: 50%;">50%</div></div>
-    <p>Networking and Hardware (Ruckus/Brocade Routers, Switches)</p>
-    <div class="progress-bar"><div style="width: 50%;">50%</div></div>
-  </div>
+    <!-- My Location Section -->
+    <div class="section">
+      <h2>My Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.870063895292!2d-97.74034978413716!3d30.267153081894274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5d5a5f6f7ef%3A0x2f9b7ef82f957b2!2sRound%20Rock%2C%20TX!5e0!3m2!1sen!2sus!4v1676856070238!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
-  <!-- Connect With Me Section -->
-  <div class="section social-links">
-    <h2>Connect With Me</h2>
-    <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
-  </div>
-
-  <!-- My Location Section -->
-  <div class="section">
-    <h2>My Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.870063895292!2d-97.74034978413716!3d30.267153081894274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5d5a5f6f7ef%3A0x2f9b7ef82f957b2!2sRound%20Rock%2C%20TX!5e0!3m2!1sen!2sus!4v1676856070238!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-
-  <!-- Contact Form Section -->
-  <div class="section">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xanekdna" method="POST" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="download-btn">Send</button>
-    </form>
-  </div>
-</div>
-
+    <!-- Contact Form Section -->
+    <div class="section">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xanekdna" method="POST" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="download-btn">Send</button>
+        <div id="form-message"></div>
+      </form>
+    </div>
   </div>
 
   <script>
-    // Toggle the visibility of the entire Projects section
+    // Animation for sections
+    document.addEventListener("DOMContentLoaded", function() {
+      let sections = document.querySelectorAll(".section");
+      sections.forEach((section, index) => {
+        setTimeout(() => {
+          section.classList.add("visible");
+        }, index * 300);
+      });
+    });
+
+    // Theme toggle
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    // Toggle Projects section
     function toggleProjects() {
       const projectsList = document.getElementById('projects-list');
       const toggleBtn = document.getElementById('projects-toggle');
+      const header = document.querySelector('#projects .collapsible-header');
 
-      if (projectsList.style.display === 'none' || projectsList.style.display === '') {
-        projectsList.style.display = 'block';
-        toggleBtn.textContent = '-';
-      } else {
-        projectsList.style.display = 'none';
-        toggleBtn.textContent = '+';
-      }
+      const isExpanded = projectsList.style.display !== 'none';
+      projectsList.style.display = isExpanded ? 'none' : 'block';
+      toggleBtn.textContent = isExpanded ? '+' : '-';
+      header.setAttribute('aria-expanded', !isExpanded);
     }
 
-    // Toggle visibility of individual project sections
+    // Toggle individual project details
     function toggleProjectDetails(header) {
       const button = header.querySelector('.toggle-button');
       const details = header.nextElementSibling;
-
-      if (details.style.display === 'none' || details.style.display === '') {
-        details.style.display = 'block';
-        button.textContent = '-';
-      } else {
-        details.style.display = 'none';
-        button.textContent = '+';
-      }
+      const isExpanded = details.style.display !== 'none';
+      details.style.display = isExpanded ? 'none' : 'block';
+      button.textContent = isExpanded ? '+' : '-';
+      header.setAttribute('aria-expanded', !isExpanded);
     }
+
+    // Keyboard support for collapsible sections
+    document.querySelectorAll('.collapsible-header').forEach(button => {
+      button.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          button.click();
+        }
+      });
+    });
+
+    // Contact form submission
+    const form = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          formMessage.innerHTML = '<span style="color: green;">✅ Thanks for your message! I\'ll get back to you soon.</span>';
+          form.reset();
+        } else {
+          formMessage.innerHTML = '<span style="color: red;">❌ Oops! Something went wrong. Please try again.</span>';
+        }
+      }).catch(error => {
+        formMessage.innerHTML = '<span style="color: red;">❌ There was an error submitting the form.</span>';
+      }).finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send';
+      });
+    });
   </script>
-<!-- Animation + Theme Toggle Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let sections = document.querySelectorAll(".section");
-    sections.forEach((section, index) => {
-      setTimeout(() => {
-        section.classList.add("visible");
-      }, index * 300);
-    });
-  });
-
-  function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
-  }
-</script>
-
-<!-- Contact Form Submission Handler -->
-<script>
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        alert("✅ Thanks for your message! I'll get back to you soon.");
-        form.reset();
-      } else {
-        alert("❌ Oops! Something went wrong. Please try again.");
-      }
-    }).catch(error => {
-      alert("❌ There was an error submitting the form.");
-    });
-  });
-</script>
-
 </body>
 </html>
-
