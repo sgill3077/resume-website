@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+k<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,43 +6,92 @@
   <title>Shimron Gill - Resume</title>
   <style>
 /* Styling for the Projects Section */
-#projects {
-  margin-top: 40px;
-}
+<style>
+ body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s, border 0.3s;
+    }
 
-.project {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
+    /* Styling for the Projects Section */
+    #projects {
+      margin-top: 40px;
+      border: 1px solid transparent; /* Transparent border */
+      border-radius: 12px; /* Smooth rounded corners */
+      padding: 20px;
+      background-color: #f9f9f9; /* Slightly lighter background */
+      transition: background-color 0.3s, border 0.3s;
+    }
 
-.project h3 {
-  font-size: 1.6em;
-  margin-bottom: 10px;
-}
+    .project {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f2f2f2; /* Slightly lighter project background */
+      border: 1px solid transparent; /* Transparent border */
+      border-radius: 8px;
+      transition: background-color 0.3s, border 0.3s;
+    }
 
-.project ul {
-  list-style-type: none;
-  padding: 0;
-}
+    .project h3 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
 
-.project ul li {
-  margin: 5px 0;
-}
+    .toggle-button {
+      font-size: 1.2em;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #0000FF;
+      margin-right: 10px;
+    }
 
-.project a {
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-}
+    .project ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-.project a:hover {
-  text-decoration: underline;
-}
+    .project ul li {
+      margin: 5px 0;
+    }
 
+    .project a {
+      text-decoration: none;
+      color: #0000FF;
+      font-weight: bold;
+    }
 
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .collapsible-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .collapsible-header span {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .toggle-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    
     body {
         font-family: 'Arial', sans-serif;
         margin: 0;
@@ -323,28 +372,43 @@
     </ul>
   </div>
 
-<!-- Projects Section -->
-<div class="section" id="projects">
-  <h2>Projects</h2>
+ <div class="container">
+    <!-- Collapsible Projects Section -->
+   <div class="section" id="projects">
+      <div class="collapsible-header" onclick="toggleProjects()">
+        <span class="toggle-wrapper">
+          <button class="toggle-button" id="projects-toggle">-</button>
+          <span>Projects</span>
+        </span>
+      </div>
 
-  <!-- Automation Script Hub Project -->
-  <div class="project">
-    <h3>Automation Script Hub</h3>
-    <p>A comprehensive toolkit of automation scripts aimed at optimizing system administration tasks, improving efficiency, and reducing manual intervention.</p>
-    
-    <ul>
-      <li><strong>Key Features:</strong> Modular script design, CLI menus, logging, error handling</li>
-      <li><strong>Use Cases:</strong> Auto patch servers, restart stuck services, clean up temp/log files</li>
-      <li><strong>Platform:</strong> Windows (PowerShell), Linux (Bash)</li>
-    </ul>
+      <div id="projects-list" style="display: block;">
+        <!-- Example Project -->
+        <div class="project">
+          <div class="collapsible-header" onclick="toggleProjectDetails(this)">
+            <span class="toggle-wrapper">
+              <button class="toggle-button">-</button>
+              <span>Automation Script Hub</span>
+            </span>
+          </div>
+          <div class="project-details" style="display: block;">
+            <ul>
+              <li><strong>Key Features:</strong> Modular script design, CLI menus, logging, error handling</li>
+              <li><strong>Use Cases:</strong> Auto patch servers, restart stuck services, clean up temp/log files</li>
+              <li><strong>Platform:</strong> Windows (PowerShell), Linux (Bash)</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> PowerShell, Bash, Git, HTML</p>
+            <a href="https://github.com/sgill3077/automation-script-hub" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+          </div>
+        </div>
 
-    <p><strong>Tech Stack:</strong> PowerShell, Bash, Git, HTML</p>
-    <a href="https://github.com/sgill3077/automation-script-hub" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>  <!-- Change to your actual GitHub link -->
-  </div>
+        <!-- Add More Projects Here -->
+        <!-- You can add additional project sections like the above, following the same structure -->
 
-  <!-- You can add more projects here in the future -->
+      </div>
+      <div class="clear"></div>
+    </div>
 
-</div>
 
 
   <!-- Education Section -->
@@ -397,6 +461,37 @@
   </div>
 </div>
 
+  </div>
+
+  <script>
+    // Toggle the visibility of the entire Projects section
+    function toggleProjects() {
+      const projectsList = document.getElementById('projects-list');
+      const toggleBtn = document.getElementById('projects-toggle');
+
+      if (projectsList.style.display === 'none' || projectsList.style.display === '') {
+        projectsList.style.display = 'block';
+        toggleBtn.textContent = '-';
+      } else {
+        projectsList.style.display = 'none';
+        toggleBtn.textContent = '+';
+      }
+    }
+
+    // Toggle visibility of individual project sections
+    function toggleProjectDetails(header) {
+      const button = header.querySelector('.toggle-button');
+      const details = header.nextElementSibling;
+
+      if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.textContent = '-';
+      } else {
+        details.style.display = 'none';
+        button.textContent = '+';
+      }
+    }
+  </script>
 <!-- Animation + Theme Toggle Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
