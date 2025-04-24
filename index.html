@@ -29,7 +29,7 @@
       --link-color: #00BFFF;
       --section-bg: #444444;
       --project-bg: #414141;
-      --project-highlight-bg: #4a4a4a; /* Adjusted to be less dark (was #3a3a3a) */
+      --project-highlight-bg: #4a4a4a;
       --navy-blue: #1E90FF;
       --progress-bg: #555;
       --input-bg: #333;
@@ -46,9 +46,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-     
-
- min-height: 100vh;
+      min-height: 100vh;
     }
 
     .container {
@@ -155,13 +153,12 @@
       transition: width 1s ease-in-out;
     }
 
-    /* Override progress bar colors in dark mode to match light mode */
     body.dark-mode .progress-bar {
-      background-color: #ddd; /* Same as light mode */
+      background-color: #ddd;
     }
 
     body.dark-mode .progress-bar div {
-      background: #007BFF; /* Same as light mode */
+      background: #007BFF;
     }
 
     .visible .progress-bar div {
@@ -183,18 +180,17 @@
       font-size: 16px;
       font-family: inherit;
       transition: border-color 0.3s, box-shadow 0.3s;
-      background: white; /* Always white in both modes */
+      background: white;
       color: var(--text-color);
     }
 
     body.dark-mode input,
     body.dark-mode textarea {
-      color: #333; /* Dark gray for better contrast on white background in dark mode */
+      color: #333;
     }
 
     input:focus, textarea:focus {
-      outline: none; /* Remove default browser outline */
-      /* Removed border-color and box-shadow to eliminate highlight */
+      outline: none;
     }
 
     textarea {
@@ -256,7 +252,7 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
-      color: var(--navy-blue); /* Use progress bar blue for toggle buttons */
+      color: var(--navy-blue);
       margin-right: 10px;
     }
 
@@ -283,7 +279,7 @@
 
     .project a {
       text-decoration: none;
-      color: var(--navy-blue); /* Use progress bar blue for project links */
+      color: var(--navy-blue);
       font-weight: bold;
     }
 
@@ -436,7 +432,7 @@
             <a href="https://github.com/sgill3077/automation-script-hub" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
           </div>
         </div>
-        <div class="project">
+        <div class="project project-highlight">
           <button class="collapsible-header" aria-expanded="true" aria-controls="project-2-details" onclick="toggleProjectDetails(this)">
             <span class="toggle-wrapper">
               <span class="toggle-button">-</span>
@@ -449,7 +445,7 @@
               <li>Configured Apache, registered domain via Cloudflare, and implemented HTTPS with Let's Encrypt.</li>
             </ul>
             <p><strong>Tech Stack:</strong> AWS EC2, Apache, Cloudflare, Let's Encrypt</p>
-            <a href="https://github.com/sgill3077/resume-website" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+            <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
           </div>
         </div>
       </div>
@@ -483,7 +479,7 @@
     <div class="section social-links">
       <h2>Connect With Me</h2>
       <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/sgill3077" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
     </div>
 
@@ -507,7 +503,6 @@
   </div>
 
   <script>
-    // Animation for sections
     document.addEventListener("DOMContentLoaded", function() {
       let sections = document.querySelectorAll(".section");
       sections.forEach((section, index) => {
@@ -517,12 +512,10 @@
       });
     });
 
-    // Theme toggle
     function toggleTheme() {
       document.body.classList.toggle("dark-mode");
     }
 
-    // Toggle Projects section
     function toggleProjects() {
       const projectsList = document.getElementById('projects-list');
       const toggleBtn = document.getElementById('projects-toggle');
@@ -534,7 +527,6 @@
       header.setAttribute('aria-expanded', !isExpanded);
     }
 
-    // Toggle individual project details
     function toggleProjectDetails(header) {
       const button = header.querySelector('.toggle-button');
       const details = header.nextElementSibling;
@@ -544,7 +536,6 @@
       header.setAttribute('aria-expanded', !isExpanded);
     }
 
-    // Keyboard support for collapsible sections
     document.querySelectorAll('.collapsible-header').forEach(button => {
       button.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -554,7 +545,6 @@
       });
     });
 
-    // Contact form submission
     const form = document.getElementById("contact-form");
     const formMessage = document.getElementById("form-message");
 
