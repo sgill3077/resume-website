@@ -29,7 +29,7 @@
       --link-color: #00BFFF;
       --section-bg: #444444;
       --project-bg: #414141;
-      --project-highlight-bg: #3a3a3a;
+      --project-highlight-bg: #4a4a4a; /* Adjusted to be less dark (was #3a3a3a) */
       --navy-blue: #1E90FF;
       --progress-bg: #555;
       --input-bg: #333;
@@ -46,7 +46,9 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      min-height: 100vh;
+     
+
+ min-height: 100vh;
     }
 
     .container {
@@ -151,6 +153,15 @@
       line-height: 20px;
       width: 0;
       transition: width 1s ease-in-out;
+    }
+
+    /* Override progress bar colors in dark mode to match light mode */
+    body.dark-mode .progress-bar {
+      background-color: #ddd; /* Same as light mode */
+    }
+
+    body.dark-mode .progress-bar div {
+      background: #007BFF; /* Same as light mode */
     }
 
     .visible .progress-bar div {
@@ -425,6 +436,22 @@
             <a href="https://github.com/sgill3077/automation-script-hub" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
           </div>
         </div>
+        <div class="project">
+          <button class="collapsible-header" aria-expanded="true" aria-controls="project-2-details" onclick="toggleProjectDetails(this)">
+            <span class="toggle-wrapper">
+              <span class="toggle-button">-</span>
+              <span class="sub-project-title">Resume Website</span>
+            </span>
+          </button>
+          <div class="project-details" id="project-2-details" style="display: block;">
+            <ul>
+              <li>Developed a personal resume website hosted on AWS EC2.</li>
+              <li>Configured Apache, registered domain via Cloudflare, and implemented HTTPS with Let's Encrypt.</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> AWS EC2, Apache, Cloudflare, Let's Encrypt</p>
+            <a href="https://github.com/sgill3077/resume-website" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -456,7 +483,7 @@
     <div class="section social-links">
       <h2>Connect With Me</h2>
       <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/sgill3077/apache-site" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/sgill3077" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
     </div>
 
