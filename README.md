@@ -21,7 +21,7 @@ Visit the live version here: [https://shimron.gillsutd.com](https://shimron.gill
 - **Responsive Resume Layout** – A mobile-friendly and dynamic design.
 - **Dark/Light Mode Toggle** – Allows users to switch between light and dark themes for accessibility and preference.
 - **Collapsible Projects Section** – Hide or reveal detailed descriptions of my key projects.
-- **Contact Me Form** – A non-functional form by default (can be wired to an email service or backend for full functionality).
+- **Contact Me Form** – A functional form by default (can also be wired to an email service or backend for full functionality).
 - **Location Section with Embedded Map** – Displays my location using an interactive map.
 
 ## 📬 Contact
