@@ -37,12 +37,12 @@
     }
 
     body {
-      background: white;
+      background: var(--bg-color);
       color: var(--text-color);
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 40px 10px;
-      transition: color 0.3s;
+      transition: color 0.3s, background 0.3s;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -120,6 +120,30 @@
     .download-btn:hover, .theme-toggle:hover {
       background: #0056b3;
       transform: scale(1.03);
+    }
+
+    .download-resume {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    #resume-format {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid var(--input-border);
+      background: var(--input-bg);
+      color: var(--text-color);
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #resume-format:focus {
+      outline: none;
+      border-color: var(--navy-blue);
     }
 
     .contact a {
@@ -345,13 +369,19 @@
     <div class="center-header">
       <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
       <h1>Shimron Gill</h1>
-      <a href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+      <div class="download-resume">
+        <select id="resume-format" onchange="updateDownloadLink()">
+          <option value="pdf">PDF</option>
+          <option value="docx">DOCX</option>
+        </select>
+        <a id="download-resume-btn" href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+      </div>
     </div>
 
     <!-- About Me Section -->
     <div class="section">
       <h2>About Me</h2>
-      <p>Accomplished Systems Engineer skilled in automation, system administration, and IT infrastructure support. Adept at troubleshooting and optimizing server environments and delivering technical excellence in fast-paced environments.</p>
+      <p>Results-driven IT professional with 5+ years of experience in systems administration, server hardware management, and automation scripting. Proven track record supporting enterprise infrastructure, optimizing operations, and resolving technical challenges in lab and production environments. Adept with VMware, RHEL, and major cloud platforms (AWS, Azure). Strong communicator who thrives in high-pressure settings.</p>
     </div>
 
     <!-- Work Experience Section -->
@@ -360,44 +390,56 @@
       <p><strong>Kforce Inc.</strong><br>
       <em>Lab Support Engineer, Round Rock, Texas | Jan 2023 – Nov 2024</em></p>
       <ul>
-        <li>Performed LaaS server hardware assembly, disassembly, and part replacements quickly and accurately.</li>
-        <li>Installed and configured computing infrastructure and deployed new servers, equipment, and software as required.</li>
-        <li>Maintained accurate hardware inventory records.</li>
+        <li>Quickly and accurately performed LaaS server hardware assembly, disassembly, and part replacements.</li>
+        <li>Installed and configured computing infrastructure, deployed new servers, equipment, and software.</li>
+        <li>Maintained precise hardware inventory records.</li>
+        <li>Troubleshot and resolved technical issues promptly and efficiently.</li>
+        <li>Collaborated with cross-functional teams to optimize system performance and reliability.</li>
       </ul>
       <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br>
       <em>Systems Administrator, Austin, Texas | Mar 2021 – Aug 2022</em></p>
       <ul>
-        <li>Represented as a State MDS Automation Coordinator for troubleshooting MDS assessments for nursing facilities.</li>
-        <li>Successfully provided technical application support for Minimum Data Set (MDS) and other HHSC systems.</li>
-        <li>Updated organization's Microsoft Access database and ensured backup plans were maintained.</li>
+        <li>Acted as a State MDS Automation Coordinator, troubleshooting MDS assessments.</li>
+        <li>Provided technical support for MDS and HHSC systems.</li>
+        <li>Maintained and updated the Microsoft Access database for the organization.</li>
+        <li>Implemented backup plans for data security.</li>
+        <li>Oversaw systems administration tasks for Texas Health & Human Services Commission.</li>
       </ul>
       <p><strong>IronOrbit</strong><br>
-      <em>IT Service Desk Analyst, Remote, Texas | Jan 2021 – Feb 2021</em></p>
+      <em>IT Service Desk Analyst, Remote | Jan 2021 – Feb 2021</em></p>
       <ul>
-        <li>Efficiently answered inbound phone calls by following procedures and scripts to deliver timely resolutions.</li>
-        <li>Identified clients, collected relevant information concerning issues, and created support tickets.</li>
-        <li>Assisted client requests, delivered basic/advanced technical support, and provided excellent customer service.</li>
+        <li>Answered inbound calls, followed procedures to provide timely resolutions.</li>
+        <li>Identified clients, gathered issue details, and generated support tickets.</li>
+        <li>Supported client requests, offered basic/advanced tech assistance, ensured top-notch customer service.</li>
+        <li>Delivered efficient phone support, collected issue information, managed support tickets.</li>
+        <li>Provided comprehensive technical assistance, delivered exceptional customer service.</li>
       </ul>
       <p><strong>CyberCoders</strong><br>
       <em>Desktop & Network Support Coordinator, Alameda, California | Nov 2019 – Apr 2020</em></p>
       <ul>
-        <li>Successfully responded to and prioritized requests for technical support and assistance.</li>
-        <li>Identified and analyzed support issues to determine causes and provide potential resolutions.</li>
-        <li>Installed, configured, and assisted with antivirus and backup software (Carbonite/Acronis).</li>
+        <li>Prioritized technical support requests for efficient resolution.</li>
+        <li>Analyzed and resolved support issues to ensure smooth operations.</li>
+        <li>Installed and configured antivirus and backup software for data protection.</li>
+        <li>Managed desktop and network support for CyberCoders.</li>
+        <li>Assisted in troubleshooting technical issues to maintain system integrity.</li>
       </ul>
       <p><strong>EmrCpr, Global IT</strong><br>
       <em>Engineer Lab Administrator, Sunnyvale, California | Oct 2018 – Oct 2019</em></p>
       <ul>
-        <li>Efficiently configured, troubleshot, stacked, and upgraded code for Ruckus and Brocade routers and switches.</li>
-        <li>Administered, managed, and troubleshot network infrastructure equipment (PDU, Terminal Server, KVM).</li>
-        <li>Installed VMware ESXi vSphere client for Windows and Linux VM deployment.</li>
+        <li>Configured, troubleshooted, and upgraded Ruckus and Brocade routers and switches efficiently.</li>
+        <li>Administered, managed, and troubleshot PDU, Terminal Server, and KVM network infrastructure equipment.</li>
+        <li>Installed VMware ESXi vSphere client for deploying Windows and Linux VMs.</li>
+        <li>Monitored network performance and resolved connectivity issues promptly.</li>
+        <li>Conducted regular maintenance tasks to ensure optimal system functionality.</li>
       </ul>
-      <p><strong>IT Desktop Technician, Fremont, California</strong><br>
-      <em>Jul 2018 – Oct 2018</em></p>
+      <p><strong>EmrCpr, Global IT</strong><br>
+      <em>IT Desktop Technician, Fremont, California | Jul 2018 – Oct 2018</em></p>
       <ul>
-        <li>Facilitated disconnect/reconnect for desktop setup, monitors, and docking stations.</li>
-        <li>Coordinated rack and stack servers, routers, and switches and performed cable management.</li>
-        <li>Debugged and installed low-voltage cables, security cameras, and in-ceiling speakers using schematic diagrams.</li>
+        <li>Managed disconnect/reconnect process for desktop configuration, monitors, and docking stations.</li>
+        <li>Organized installation of servers, routers, and switches, including cable organization.</li>
+        <li>Troubleshot and set up low-voltage cables, security cameras, and in-ceiling speakers based on schematic diagrams.</li>
+        <li>Coordinated rack and stack of equipment.</li>
+        <li>Installed and debugged security cameras and in-ceiling speakers.</li>
       </ul>
     </div>
 
@@ -547,6 +589,16 @@
         }
       });
     });
+
+    function updateDownloadLink() {
+      const format = document.getElementById('resume-format').value;
+      const downloadBtn = document.getElementById('download-resume-btn');
+      if (format === 'pdf') {
+        downloadBtn.href = 'Shimron_Gill_Resume.pdf';
+      } else if (format === 'docx') {
+        downloadBtn.href = 'Shimron_Gill_Resume.docx';
+      }
+    }
 
     const form = document.getElementById("contact-form");
     const formMessage = document.getElementById("form-message");
