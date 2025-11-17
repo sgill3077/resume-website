@@ -365,95 +365,86 @@
       <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
     </div>
 
-    <!-- Profile Section -->
-    <div class="center-header">
-      <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
-      <h1>Shimron Gill</h1>
-      <div class="download-resume">
-        <select id="resume-format" onchange="updateDownloadLink()">
-          <option value="pdf">PDF</option>
-          <option value="docx">DOCX</option>
-        </select>
-        <a id="download-resume-btn" href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
-      </div>
-    </div>
+ <!-- Profile Section -->
+<div class="center-header">
+  <img src="Headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
+  <h1>Shimron Gill</h1>
+  <p class="profile-title">
+    Systems Engineer | Server Hardware | VMware | AWS | Automation & Scripting
+  </p>
+  <div class="download-resume">
+    <select id="resume-format" onchange="updateDownloadLink()">
+      <option value="pdf">PDF</option>
+      <option value="docx">DOCX</option>
+    </select>
+    <a id="download-resume-btn" href="Shimron_Gill_Resume.pdf" class="download-btn" download>Download Resume</a>
+  </div>
+</div>
+
+<style>
+  .profile-title {
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+</style>
+
 
     <!-- About Me Section -->
     <div class="section">
       <h2>About Me</h2>
-      <p>Results-driven IT professional with 4+ years of experience in systems administration, server hardware management, and automation scripting. Proven track record supporting enterprise infrastructure, optimizing operations, and resolving technical challenges in lab and production environments. Adept with VMware, RHEL, and major cloud platforms (AWS, Azure). Strong communicator who thrives in high-pressure settings.</p>
+      <p>Results-driven Data Center & Systems Engineer with 5+ years of experience in systems administration, server hardware
+management, cloud, virtualization, and data center operations. Skilled in designing, implementing, and
+maintaining robust IT infrastructures, optimizing performance, and ensuring seamless integration across
+multiple platforms. Thrives under pressure, delivering mission-critical solutions that enhance scalability,
+reliability, and operational efficiency.</p>
     </div>
 
     <!-- Work Experience Section -->
     <div class="section">
       <h2>Work Experience</h2>
-      <p><strong>Kelly Services.</strong><br>
-      <em>System Test Technician, Georgetown, Texas | Jun 2025 – Present</em></p>
+      <p><strong>Kelly Services</strong><br><em>System Test Technician, Georgetown, TX | Jun 2025 – Present</em></p>
       <ul>
-        <li>Performed full system setup and configuration for devices in the test environment,
-ensuring readiness for functional validation.</li>
-        <li>Executed scripted system tests and followed standardized processes to verify
-system performance and functionality.</li>
-        <li>Conducted system updates, including firmware and software patches, followed
-by thorough verification, applying effective troubleshooting techniques to resolve
-hardware and software issues.</li>
-        <li>Performed hardware-level repairs in alignment with documented procedures and
-safety guidelines.</li>
-        <li>Contributed to ongoing process enhancements by identifying inefficiencies and
-recommending procedural adjustments.</li>
+        <li>Set up and configured test-environment devices for functional validation, preparing and validating 100+ devices per week to ensure system readiness for engineering and QA teams.</li>
+        <li>Executed scripted tests and performed firmware/software updates across 50+ test cycles, verifying performance, documenting defects, and resolving 90% of hardware/software issues through efficient troubleshooting.</li>
+        <li>Performed hardware-level repairs in compliance with documented procedures and safety protocols, completing 5–10 component-level repairs tickets weekly and reducing device downtime by 30%.</li>
       </ul>
-      <p><strong>Kforce Inc.</strong><br>
-      <em>Lab Support Engineer, Round Rock, Texas | Jan 2023 – Nov 2024</em></p>
+
+      <p><strong>Kforce Inc</strong><br><em>Lab Support Engineer, Round Rock, TX | Jan 2023 – Nov 2024</em></p>
       <ul>
-        <li>Quickly and accurately performed LaaS server hardware assembly, disassembly, and part replacements.</li>
-        <li>Installed and configured computing infrastructure, deployed new servers, equipment, and software.</li>
-        <li>Maintained precise hardware inventory records.</li>
-        <li>Troubleshot and resolved technical issues promptly and efficiently.</li>
-        <li>Collaborated with cross-functional teams to optimize system performance and reliability.</li>
+        <li>Managed lab infrastructure with 99%+ system availability, delivering end-to-end support for server hardware/software deployments and ensuring optimal performance with minimal disruption.</li>
+        <li>Streamlined operations by coordinating automation script usage, reducing manual workloads by up to 30% and accelerating incident resolution through cross-functional collaboration.</li>
+        <li>Enhanced network reliability and system stability by proactively monitoring infrastructure and troubleshooting complex issues, resulting in fewer outages and faster issue resolution.</li>
       </ul>
-      <p><strong>Texas Health & Human Services Commission (HHSC).</strong><br>
-      <em>Systems Administrator, Austin, Texas | Mar 2021 – Aug 2022</em></p>
+
+      <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br><em>Systems Administrator, Austin, TX | Mar 2021 – Aug 2022</em></p>
       <ul>
-        <li>Acted as a State MDS Automation Coordinator, troubleshooting MDS assessments.</li>
-        <li>Provided technical support for MDS and HHSC systems.</li>
-        <li>Maintained and updated the Microsoft Access database for the organization.</li>
-        <li>Implemented backup plans for data security.</li>
-        <li>Oversaw systems administration tasks for Texas Health & Human Services Commission.</li>
+        <li>Served as State MDS Automation Coordinator, troubleshooting an average of 40–60 MDS assessments per week to ensure compliance and accuracy, while providing technical support to 50+ end users across MDS and HHSC systems.</li>
+        <li>Administered and enhanced the organization's Microsoft Access database, improving data accuracy by 20% and increasing system usability for 3+ departments through routine updates, optimization, and data validation.</li>
+        <li>Managed daily IT operations and systems administration for the Texas Health & Human Services Commission, supporting 100+ employees, implemented a data backup plan that reduced data-loss incidents by 100% and improved system reliability by 30%.</li>
       </ul>
-      <p><strong>IronOrbit.</strong><br>
-      <em>IT Service Desk Analyst, Remote | Jan 2021 – Feb 2021</em></p>
+
+      <p><strong>IronOrbit</strong><br><em>IT Service Desk Analyst, Remote | Jan 2021 – Feb 2021</em></p>
       <ul>
-        <li>Managed high-volume inbound calls with scripted responses, following company procedures for consistent client experiences.</li>
-        <li>Assessed client needs, collected information, and generated accurate support tickets to quickly resolve requests and issues.</li>
-        <li>Acted as the initial point of contact, providing friendly and professional customer service to strengthen client relationship.</li>
-        <li>Showcased strong verbal and written communication skills, adeptly multitasking in a fast-paced environment.</li>
-        </ul>
-      <p><strong>CyberCoders LLC.</strong><br>
-      <em>Desktop & Network Support Coordinator, Alameda, California | Nov 2019 – Apr 2020</em></p>
-      <ul>
-        <li>Resolved end-user hardware and software issues, ensuring minimal disruption to operations.</li>
-        <li>Diagnosed and addressed system failures, enhancing overall system reliability.</li>
-        <li>Managed procurement processes for necessary hardware and software resources.</li>
-        <li>Supported project initiatives, consistently meeting deadlines and deliverables.</li>
-        <li>Documented project hours and tasks efficiently to maintain accurate records.</li>
+        <li>Handled high-volume inbound calls, averaging 40–60 calls per day, using scripted responses to maintain consistent, compliant, and professional client interactions.</li>
+        <li>Assessed client needs and created accurate support tickets, documenting 100% of inquiries and facilitating timely issue resolution by clearly capturing symptoms, priorities, and required actions.</li>
+        <li>Delivered excellent customer service as the first point of contact, maintaining a 95%+ customer satisfaction rating and demonstrating strong communication and multitasking abilities in a fast-paced environment.</li>
       </ul>
-      <p><strong>EmrCpr, Global IT.</strong><br>
-      <em>Engineer Lab Administrator, Sunnyvale, California | Oct 2018 – Oct 2019</em></p>
+
+      <p><strong>CyberCoders</strong><br><em>Desktop & Network Support Coordinator, Alameda, CA | Nov 2019 – Apr 2020</em></p>
       <ul>
-        <li>Configured, troubleshooted, and upgraded Ruckus and Brocade routers and switches efficiently.</li>
-        <li>Administered, managed, and troubleshot PDU, Terminal Server, and KVM network infrastructure equipment.</li>
-        <li>Installed VMware ESXi vSphere client for deploying Windows and Linux VMs.</li>
-        <li>Monitored network performance and resolved connectivity issues promptly.</li>
-        <li>Conducted regular maintenance tasks to ensure optimal system functionality.</li>
+        <li>Resolved end-user hardware and software issues, troubleshooting 20–30 support requests per week and achieving a 90% first-contact resolution rate through effective problem analysis and system diagnostics.</li>
+        <li>Assisted in project execution, consistently meeting deadlines, managing deliverables across 3–5 concurrent projects, and accurately recording 100% of hours and tasks in time-tracking systems to support reporting and improving team workflow visibility by 25%.</li>
+        <li>Coordinated procurement of approved IT resources, processing 20–30 hardware/software requests weekly, ensuring on-time availability of equipment and reducing operational delays by 20%.</li>
       </ul>
-      <p><strong>EmrCpr, Global IT.</strong><br>
-      <em>IT Desktop Technician, Fremont, California | Jul 2018 – Oct 2018</em></p>
+
+      <p><strong>EmrCpr, Global IT</strong><br><em>Engineer Lab Administrator, Sunnyvale, CA | Oct 2018 – Oct 2019</em></p>
       <ul>
-        <li>Managed disconnect/reconnect process for desktop configuration, monitors, and docking stations.</li>
-        <li>Organized installation of servers, routers, and switches, including cable organization.</li>
-        <li>Troubleshot and set up low-voltage cables, security cameras, and in-ceiling speakers based on schematic diagrams.</li>
-        <li>Coordinated rack and stack of equipment.</li>
-        <li>Installed and debugged security cameras and in-ceiling speakers.</li>
+        <li>Configured, troubleshot, and upgraded Ruckus and Brocade routers/switches, reducing network downtime by 90% and sustaining 99%+ uptime through proactive monitoring, performance tuning, and rapid issue resolution.</li>
+        <li>Installed, managed, and optimized VMware ESXi environments using vSphere Client, deploying and maintaining 50+ Windows and Linux VMs to streamline server provisioning and support scalable, high-availability infrastructure.</li>
+        <li>Administered PDU, Terminal Server, and KVM infrastructure across 100+ devices, performing scheduled maintenance, firmware updates, and capacity improvements while ensuring full compliance with security and performance standards.</li>
       </ul>
     </div>
 
@@ -504,12 +495,20 @@ recommending procedural adjustments.</li>
     </div>
 
     <!-- Education Section -->
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>Texas A&M University - Central Texas</strong> – B.S. Computer Information Systems, Currently Enrolled</p>
-      <p><strong>Texas State University</strong> – B.S. Computer Science (9 credit hours), Jul 2022</p>
-      <p><strong>Arizona State University</strong> – B.S. Information Technology (25 credit hours), Nov 2020</p>
-    </div>
+<div class="section">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Science: Computer Information Systems</strong>, 06/2025<br>
+  Texas A&M University - Central Texas - Currently Enrolled</p>
+
+  <p><strong>College Coursework Completed: Computer Science</strong>, 07/2022<br>
+  Texas State University - San Marcos<br>
+  Earned 9 credit hours</p>
+
+  <p><strong>College Coursework Completed: Information Technology</strong>, 11/2020<br>
+  Arizona State University - Online<br>
+  Earned 25 credit hours</p>
+</div>
+
 
     <!-- Certifications Section -->
     <div class="section">
@@ -517,22 +516,38 @@ recommending procedural adjustments.</li>
       <p>CompTIA A+ | CompTIA Network+ | Aug 2026</p>
     </div>
 
-    <!-- Skills Section -->
-    <div class="section">
-      <h2>Skills</h2>
-      <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
-      <div class="progress-bar"><div style="width: 70%;">70%</div></div>
-      <p>Windows/Linux Administration</p>
-      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-      <p>Applications (SAS-Viya, SFDC, ServiceNow, PuTTY, VNC, Wireshark, LibreNMS)</p>
-      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-      <p>Virtualization & Cloud (VMware, Azure, AWS)</p>
-      <div class="progress-bar"><div style="width: 60%;">60%</div></div>
-      <p>Scripting (Python, PowerShell, Bash, HTML)</p>
-      <div class="progress-bar"><div style="width: 50%;">50%</div></div>
-      <p>Networking and Hardware (Ruckus/Brocade Routers, Switches)</p>
-      <div class="progress-bar"><div style="width: 50%;">50%</div></div>
-    </div>
+<!-- Skills Section -->
+<div class="section">
+  <h2>Skills</h2>
+
+  <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
+  <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+
+  <p>Networking & Infrastructure (Ruckus/Brocade Routers, Switches, Low-Voltage Cabling)</p>
+  <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+
+  <p>Operating Systems Administration (Windows, Linux, MacOS)</p>
+  <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+
+  <p>Virtualization & Cloud Technologies (VMware, Azure, AWS)</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+
+  <p>Scripting & Automation (Python, PowerShell, Bash, HTML)</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+
+  <p>Data Center Operations & System Management</p>
+  <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+
+  <p>Software Deployment & Configuration Management</p>
+  <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+
+  <p>Technical Troubleshooting & Performance Optimization</p>
+  <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+
+  <p>Infrastructure Documentation & Standardization</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+</div>
+
 
     <!-- Connect With Me Section -->
     <div class="section social-links">
