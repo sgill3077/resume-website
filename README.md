@@ -1,4 +1,4 @@
-# Resume Website
+# Resume Website @ https://www.shimron.gillsutd.com
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -104,7 +104,6 @@ http://localhost:8000
 
 - GitHub: https://github.com/sgill3077
 - LinkedIn: https://linkedin.com/in/shimrongill
-- Portfolio: https://www.shimron.gillsutd.com
 
 ---
 
