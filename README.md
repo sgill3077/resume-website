@@ -105,6 +105,7 @@ http://localhost:8000
 
 - GitHub: https://github.com/sgill3077
 - LinkedIn: https://linkedin.com/in/shimrongill
+- Portfilio: https://www.shimron.gillsutd.com
 
 ---
 
