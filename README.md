@@ -88,12 +88,6 @@ http://localhost:8000
 
 ---
 
-## Screenshots
-
-_Add screenshots here later._
-
----
-
 ## Future Improvements
 
 - Active navbar highlighting
