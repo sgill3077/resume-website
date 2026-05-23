@@ -48,7 +48,6 @@ portfolio/
 │   ├── favicon/
 │   │   ├── favicon-dark.png
 │   │   ├── favicon-light.png
-│   │   └── favicon.png
 │   ├── screenshots/
 │   │   └── headshot1.jpeg
 │   ├── shimron_gill_resume.docx
@@ -105,7 +104,7 @@ http://localhost:8000
 
 - GitHub: https://github.com/sgill3077
 - LinkedIn: https://linkedin.com/in/shimrongill
-- Portfilio: https://www.shimron.gillsutd.com
+- Portfolio: https://www.shimron.gillsutd.com
 
 ---
 
