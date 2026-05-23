@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Shimron Gill's professional resume and portfolio, showcasing skills in systems engineering and IT infrastructure."
+  />
+
+  <meta
+    name="keywords"
+    content="Shimron Gill, resume, systems engineer, IT, portfolio"
+  />
+
+  <meta
+    name="author"
+    content="Shimron Gill"
+  />
+
+  <title>Shimron Gill - Resume</title>
+
+<link
+  id="favicon"
+  rel="icon"
+  type="image/png"
+  href="./assets/favicon/favicon-light.png"
+>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav class="navbar">
+  <div class="nav-container">
+
+<div class="mobile-nav-header">
+  <span class="mobile-nav-title">Welcome to My Portfolio</span>
+
+  <button class="hamburger" onclick="toggleMenu()">
+    ☰
+  </button>
+</div>
+
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+      Toggle Dark Mode
+    </button>
+
+  </div>
+</nav>
+
+  <!-- Profile Section -->
+  <div class="center-header">
+    <img src="assets/screenshots/headshot1.jpeg" alt="Shimron Gill" class="profile-pic" />
+    <h1>Shimron Gill</h1>
+    <div class="profile-title-box">
+  <p class="profile-title">
+    Systems Engineer | Server Hardware | VMware | AWS | Automation & Scripting
+  </p>
+</div>
+    <div class="download-resume">
+      <select id="resume-format" onchange="updateDownloadLink()">
+        <option value="pdf">PDF</option>
+        <option value="docx">DOCX</option>
+      </select>
+      <a id="download-resume-btn" href="assets/shimron_gill_resume.pdf" class="download-btn" download>Download Resume</a>
+    </div>
+  </div>
+
+    <!-- About Me Section -->
+   <div class="section" id="about">
+      <h2>About Me</h2>
+      <p>Results-driven Data Center & Systems Engineer with 5+ years of experience in systems administration, server hardware
+management, cloud, virtualization, and data center operations. Skilled in designing, implementing, and
+maintaining robust IT infrastructures, optimizing performance, and ensuring seamless integration across
+multiple platforms. Thrives under pressure, delivering mission-critical solutions that enhance scalability,
+reliability, and operational efficiency.</p>
+    </div>
+
+    <!-- Work Experience Section -->
+   <div class="section" id="experience">
+      <h2>Work Experience</h2>
+      <p><strong>Kelly Services</strong><br><em>System Test Technician, Georgetown, TX | Jun 2025 – Feb 2026</em></p>
+      <ul>
+        <li>Configured, validated, and documented over 50 Linux and Windows test servers weekly for engineering teams, ensuring readiness, compliance, and consistent test environment availability.</li>
+        <li>Executed automated scripted testing and coordinated firmware/software updates across 50+ test cycles, resolving roughly 90% of hardware and software issues before escalation to engineering.</li>
+        <li>Performed 5–8 board-level and component-level hardware repairs weekly, reducing device downtime by roughly 30% and extending overall equipment service life.</li>
+      </ul>
+
+      <p><strong>Kforce Inc</strong><br><em>Lab Support Engineer, Round Rock, TX | Jan 2023 – Nov 2024</em></p>
+      <ul>
+        <li>Maintained 99%+ uptime for lab infrastructure, supported server provisioning, automation initiatives, and reduced manual tasks while ensuring reliable, and consistent system operations.</li>
+        <li>Proactively monitored, diagnosed, and resolved network, server, and infrastructure issues, improving stability, minimizing outages, and enhancing performance across lab environments.</li>
+        <li>Provided full lifecycle support for server hardware and software deployments, ensuring smooth implementation, minimal downtime, and reliable operation across all systems.</li>
+      </ul>
+
+      <p><strong>Texas Health & Human Services Commission (HHSC)</strong><br><em>Systems Administrator, Austin, TX | Mar 2021 – Aug 2022</em></p>
+      <ul>
+        <li>Administered and supported enterprise regulatory applications (including MDS systems) for 50+ users, maintaining 99%+ system availability and reporting requirements.</li>
+        <li>Provided technical application support and troubleshooting for 50+ staff members, resolving 90% of system issues and improving overall user productivity.</li>
+        <li>Assisted with IT asset and equipment inventory management, tracking 100+ devices and supporting lifecycle management of IT resources to improve operational planning and accountability.</li>
+       <li>Partnered with developers and technical teams to support reporting requirements, improving data accessibility and accuracy across multiple regulatory systems.</li>
+      </ul>
+
+      <p><strong>IronOrbit</strong><br><em>IT Service Desk Analyst, Remote | Jan 2021 – Feb 2021</em></p>
+      <ul>
+        <li>Provided technical support for 40–60 users daily, accurately documenting issues and implementing solutions that maintained 95%+ customer satisfaction.</li>
+      </ul>
+
+      <p><strong>CyberCoders</strong><br><em>Desktop & Network Support Coordinator, Alameda, CA | Nov 2019 – Apr 2020</em></p>
+      <ul>
+        <li>Achieved 90% first-contact resolution for hardware and software issues, enhancing system reliability and user satisfaction.</li>
+        <li>Oversaw concurrent IT initiatives, maintaining project schedules, tracking deliverables, and ensuring successful implementation across teams.</li>
+      </ul>
+      <p><strong>EmrCpr, Global IT</strong><br><em>Engineer Lab Administrator, Sunnyvale, CA | Oct 2018 – Oct 2019</em></p>
+      <ul>
+        <li>Configured and upgraded routers and switches across lab environments, reducing network downtime by 90% and improving reliability for development and testing teams.</li>
+        <li>Deployed and maintained 50+ virtual machines on VMware ESXi, optimizing resource utilization and ensuring consistent performance for engineering workloads and simulations.</li>
+      </ul>
+    </div>
+
+<!-- Projects Section -->
+<section class="section" id="projects">
+  <button
+    class="collapsible-header"
+    aria-expanded="true"
+    aria-controls="projects-list"
+    onclick="toggleProjects()"
+  >
+    <span class="toggle-wrapper">
+      <span class="toggle-button" id="projects-toggle">-</span>
+      <span>Projects</span>
+    </span>
+  </button>
+  <div id="projects-list">
+    <!-- Project 1 -->
+    <article class="project project-highlight">
+      <button
+        class="collapsible-header"
+        aria-expanded="true"
+        aria-controls="project-1-details"
+        onclick="toggleProjectDetails(this)"
+      >
+        <span class="toggle-wrapper">
+          <span class="toggle-button">-</span>
+          <span class="sub-project-title">Automation Script Hub</span>
+        </span>
+      </button>
+
+      <div class="project-details" id="project-1-details">
+        <ul>
+          <li>
+            <strong>Key Features:</strong>
+            Modular script design, CLI menus, logging, and error handling
+          </li>
+
+          <li>
+            <strong>Use Cases:</strong>
+            Automating server patching, restarting stuck services,
+            and cleaning temporary/log files
+          </li>
+
+          <li>
+            <strong>Platform:</strong>
+            Windows (PowerShell) and Linux (Bash)
+          </li>
+        </ul>
+
+        <p>
+          <strong>Tech Stack:</strong>
+          PowerShell, Bash, Git
+        </p>
+
+        <a
+          href="https://github.com/sgill3077/automation-script-hub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project on GitHub
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project project-highlight">
+      <button
+        class="collapsible-header"
+        aria-expanded="true"
+        aria-controls="project-2-details"
+        onclick="toggleProjectDetails(this)"
+      >
+        <span class="toggle-wrapper">
+          <span class="toggle-button">-</span>
+          <span class="sub-project-title">Resume Website</span>
+        </span>
+      </button>
+
+      <div class="project-details" id="project-2-details">
+        <ul>
+          <li>
+            <strong>Key Features:</strong>
+            Built and deployed a personal resume website on AWS EC2
+          </li>
+
+          <li>
+            <strong>Use Cases:</strong>
+            Configured Apache, connected a Cloudflare-managed domain,
+            and secured the site with Let's Encrypt HTTPS
+          </li>
+
+          <li>
+            <strong>Platform:</strong>
+            AWS EC2 (Linux/Apache and Windows Server)
+          </li>
+        </ul>
+
+        <p>
+          <strong>Tech Stack:</strong>
+          AWS EC2, Apache, Cloudflare, Let's Encrypt
+        </p>
+
+        <a
+          href="https://github.com/sgill3077/apache-site"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project on GitHub
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project project-highlight">
+      <button
+        class="collapsible-header"
+        aria-expanded="true"
+        aria-controls="project-3-details"
+        onclick="toggleProjectDetails(this)"
+      >
+        <span class="toggle-wrapper">
+          <span class="toggle-button">-</span>
+          <span class="sub-project-title">Flask Container Lab</span>
+        </span>
+      </button>
+
+      <div class="project-details" id="project-3-details">
+        <ul>
+          <li>
+            <strong>Key Features:</strong>
+            Built and containerized a Python Flask application using Podman on Fedora Linux
+          </li>
+
+          <li>
+            <strong>Use Cases:</strong>
+            Created reproducible container images, configured container networking,
+            exposed ports, and validated connectivity across local network devices
+          </li>
+
+          <li>
+            <strong>Platform:</strong>
+            Fedora Linux, Podman Containers
+          </li>
+
+          <li>
+            <strong>Status:</strong>
+            In Progress: Expanding into multi-container architecture and reverse proxy deployments
+          </li>
+        </ul>
+
+        <p>
+          <strong>Tech Stack:</strong>
+          Podman, Flask, Python, Linux, Containerfile
+        </p>
+
+        <a
+          href="https://github.com/sgill3077"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project on GitHub
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project project-highlight">
+      <button
+        class="collapsible-header"
+        aria-expanded="true"
+        aria-controls="project-4-details"
+        onclick="toggleProjectDetails(this)"
+      >
+        <span class="toggle-wrapper">
+          <span class="toggle-button">-</span>
+          <span class="sub-project-title">nginx Reverse Proxy Lab</span>
+        </span>
+      </button>
+
+      <div class="project-details" id="project-4-details">
+        <ul>
+          <li>
+            <strong>Key Features:</strong>
+            Built a multi-container environment using Podman Compose with nginx reverse proxying traffic to a backend Flask container
+          </li>
+
+          <li>
+            <strong>Use Cases:</strong>
+            Implemented internal container networking, declarative infrastructure configuration,
+            and service-to-service communication
+          </li>
+
+          <li>
+            <strong>Platform:</strong>
+            Fedora Linux, Podman Compose, nginx
+          </li>
+
+          <li>
+            <strong>Status:</strong>
+            In Progress: Planning HTTPS, CI/CD automation, and cloud deployment integration
+          </li>
+        </ul>
+
+        <p>
+          <strong>Tech Stack:</strong>
+          Podman Compose, nginx, Flask, Python, Linux
+        </p>
+
+        <a
+          href="https://github.com/sgill3077"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project on GitHub
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- Education Section -->
+<div class="section" id="education">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Science: Computer Information Systems</strong>, 06/2025<br>
+  Texas A&M University - Central Texas - Currently Enrolled</p>
+
+  <p><strong>College Coursework Completed: Computer Science</strong>, 07/2022<br>
+  Texas State University - San Marcos<br>
+  Earned 9 credit hours</p>
+
+  <p><strong>College Coursework Completed: Information Technology</strong>, 11/2020<br>
+  Arizona State University - Online<br>
+  Earned 25 credit hours</p>
+</div>
+
+
+    <!-- Certifications Section -->
+    <div class="section">
+      <h2>Certifications</h2>
+      <p>CompTIA A+ | CompTIA Network+ | Aug 2026</p>
+    </div>
+
+<!-- Skills Section -->
+<div class="section" id="skills">
+  <h2>Skills</h2>
+
+  <p>Server Hardware (Dell PowerEdge, HPE ProLiant, IBM Power)</p>
+  <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+
+  <p>Networking & Infrastructure (Ruckus/Brocade Routers, Switches, Low-Voltage Cabling)</p>
+  <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+
+  <p>Operating Systems Administration (Windows, Linux, MacOS)</p>
+  <div class="progress-bar"><div style="width: 50%;">50%</div></div>
+
+  <p>Virtualization & Cloud Technologies (VMware, Azure, AWS)</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+
+  <p>Scripting & Automation (Python, PowerShell, Bash, HTML)</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+
+  <p>Data Center Operations & System Management</p>
+  <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+
+  <p>Software Deployment & Configuration Management</p>
+  <div class="progress-bar"><div style="width: 60%;">60%</div></div>
+
+  <p>Technical Troubleshooting & Performance Optimization</p>
+  <div class="progress-bar"><div style="width: 70%;">70%</div></div>
+
+  <p>Infrastructure Documentation & Standardization</p>
+  <div class="progress-bar"><div style="width: 40%;">40%</div></div>
+</div>
+
+
+    <!-- Connect With Me Section -->
+    <div class="section social-links">
+      <h2>Connect With Me</h2>
+      <a href="https://linkedin.com/in/shimrongill" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/sgill3077" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://asu.digication.com/shimrons-portfolio/home-1" target="_blank" rel="noopener noreferrer">ePortfolio</a>
+    </div>
+
+    <!-- My Location Section -->
+    <div class="section">
+      <h2>My Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.870063895292!2d-97.74034978413716!3d30.267153081894274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5d5a5f6f7ef%3A0x2f9b7ef82f957b2!2sRound%20Rock%2C%20TX!5e0!3m2!1sen!2sus!4v1676856070238!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="section" id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xanekdna" method="POST" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="download-btn">Send</button>
+        <div id="form-message"></div>
+      </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
