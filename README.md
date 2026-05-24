@@ -9,7 +9,7 @@
 ![Netlify](https://img.shields.io/badge/Hosted_on-Netlify-00C7B7?style=for-the-badge\&logo=netlify\&logoColor=white)
 ![AWS](https://img.shields.io/badge/Originally_Deployed-AWS_EC2-FF9900?style=for-the-badge\&logo=amazonaws\&logoColor=white)
 
-A responsive personal portfolio and resume website built with HTML, CSS, and JavaScript.
+This repository contains the source code for my personal resume website: shimron.gillsutd.com. It's a simple, responsive web page designed to showcase my professional background, skills,projects. The website is built with HTML, CSS, and JavaScript.
 
 🌍 Live Website:
 https://www.shimron.gillsutd.com
@@ -136,6 +136,12 @@ http://localhost:8000
 
 * GitHub: https://github.com/sgill3077
 * LinkedIn: https://linkedin.com/in/shimrongill
+
+---
+
+📌 Disclaimer
+
+This project is intended for educational and portfolio purposes only. The code and content within this repository are not to be reused, replicated, or deployed commercially without explicit permission from the author.
 
 ---
 
