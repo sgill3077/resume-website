@@ -139,7 +139,7 @@ http://localhost:8000
 
 ---
 
-📌 Disclaimer
+# 📌 Disclaimer
 
 This project is intended for educational and portfolio purposes only. The code and content within this repository are not to be reused, replicated, or deployed commercially without explicit permission from the author.
 
