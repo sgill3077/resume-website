@@ -151,4 +151,4 @@ No part of this project may be copied, modified, redistributed, deployed, or use
 
 All rights reserved.
 
-This repository is not open source. Access to the source code is provided solely for educational review and portfolio demonstration purposes. No license is granted to use, reproduce, modify, distribute, or commercialize any portion of this project without prior written consent from the author.
+This repository is not open source. Access to the source code is provided solely for educational review and portfolio demonstration purposes. No license is granted to copy, reproduce, modify, distribute, deploy, sublicense, or commercialize any portion of this project without prior written consent from the author.
