@@ -141,10 +141,14 @@ http://localhost:8000
 
 # 📌 Disclaimer
 
-This project is intended for educational and portfolio purposes only. The code and content within this repository are not to be reused, replicated, or deployed commercially without explicit permission from the author.
+This project was created for educational and portfolio purposes. The source code, assets, and content contained in this repository are provided for viewing and evaluation only.
+
+No part of this project may be copied, modified, redistributed, deployed, or used for commercial purposes without the express written permission of the author.
 
 ---
 
 # 📜 License
 
-This project is open source and available under the MIT License.
+All rights reserved.
+
+This repository is not open source. Access to the source code is provided solely for educational review and portfolio demonstration purposes. No license is granted to use, reproduce, modify, distribute, or commercialize any portion of this project without prior written consent from the author.
